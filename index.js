@@ -44,10 +44,20 @@ next: continue with the next middleware in the chain.
    next();
  })
 
-//
-// app.get('/todos/:id', function(req, res, next) {
-//   Todo.findById(req.params.id, function(err, todo) {
-//     if(err) res.send(err);
-//     res.json(todo);
-//   });
-// });
+
+app.get('/todos/:id', function(req, res, next) {
+  Todo.findById(req.params.id, function(err, todo) {
+    if(err) res.send(err);
+    res.json(todo);
+  });
+});
+
+/* Default Express middleware
+morgan: logger
+
+body-parser: parse the body so you can access parameters in requests in req.body. e.g. req.body.name.
+
+cookie-parser: parse the cookies so you can access parameters in cookies req.cookies. e.g. req.cookies.name.
+
+serve-favicon: exactly that, serve favicon from route /favicon.ico. Should be call on the top before any other routing/middleware takes place to avoids unnecessary parsing.
+*/
