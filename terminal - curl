@@ -1,0 +1,14 @@
+Last login: Fri Jan 27 18:41:36 on ttys004
+➜  mean-todo git:(master) ✗ mkdir models
+➜  mean-todo git:(master) ✗ touch models/Todo.js
+➜  mean-todo git:(master) ✗ mv routes/users.js routes/todos.js
+➜  mean-todo git:(master) ✗ curl localhost:3000/todos
+[]%                                                                             ➜  mean-todo git:(master) ✗ curl -XPOST http://localhost:4000/todos -d 'name=Master%20Routes&completed=false&note=soon...'
+{"__v":0,"name":"Master Routes","completed":false,"note":"soon...","_id":"58a2849225802ee3f916cd5c","updated_at":"2017-02-14T04:16:18.947Z"}%                   ➜  mean-todo git:(master) curl -XGET http://localhost:4000/todos/57a655997d2241695585ecf8
+null%                                                                           ➜  mean-todo git:(master) curl -XGET http://localhost:4000/todos/58a2849225802ee3f916cd5c
+{"_id":"58a2849225802ee3f916cd5c","name":"Master Routes","completed":false,"note":"soon...","__v":0,"updated_at":"2017-02-14T04:16:18.947Z"}%                   ➜  mean-todo git:(master) curl -XGET http://localhost:4000/todos
+[{"_id":"58a2849225802ee3f916cd5c","name":"Master Routes","completed":false,"note":"soon...","__v":0,"updated_at":"2017-02-14T04:16:18.947Z"}]%                 ➜  mean-todo git:(master) curl -XPUT http://localhost:4000/todos/58a2849225802ee3f916cd5c -d "note=hola"
+{"_id":"58a2849225802ee3f916cd5c","name":"Master Routes","completed":false,"note":"soon...","__v":0,"updated_at":"2017-02-14T04:16:18.947Z"}%                   ➜  mean-todo git:(master) ✗ curl -XPUT http://localhost:4000/todos/58a2849225802ee3f916cd5c -d "note=hola"
+{"_id":"58a2849225802ee3f916cd5c","name":"Master Routes","completed":false,"note":"hola","__v":0,"updated_at":"2017-02-14T04:16:18.947Z"}%                      ➜  mean-todo git:(master) ✗ curl -XDELETE http://localhost:4000/todos/58a2849225802ee3f916cd5c
+{"_id":"58a2849225802ee3f916cd5c","name":"Master Routes","completed":false,"note":"hola","__v":0,"updated_at":"2017-02-14T04:16:18.947Z"}%                      ➜  mean-todo git:(master) ✗ curl -XGET http://localhost:4000/todos/58a2849225802ee3f916cd5c
+null%                                                                           ➜  mean-todo git:(master) ✗ 

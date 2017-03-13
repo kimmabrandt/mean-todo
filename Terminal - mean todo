@@ -1,0 +1,1237 @@
+Last login: Wed Jan 25 17:49:12 on ttys000
+➜  ~ cd documents
+➜  documents ls
+Adobe                      Sorting Algorithms.numbers
+Freebies.cdr               Sorting Methods.numbers
+GA - Web Dev Class         Ultra Fractal 5
+Photos                     application.xml
+Portfolio                  hg pass.rtf
+Portfolio Resc             kim-brandt.com
+Programs : Computer Stuff  portfolio old
+Project 4 - Misc           project-4
+Resume  - Nov 2016.pages   project_4
+Resume - Nov 2016.pages    wdi10
+Resume etc                 web-projects
+➜  documents cd web-projects 
+➜  web-projects ls
+a-project
+➜  web-projects mkdir mean-todo
+➜  web-projects cd mean-todo
+➜  mean-todo echo "#mean-todo" >> README.md
+➜  mean-todo git init
+Initialized empty Git repository in /Users/kimbrandt/Documents/web-projects/mean-todo/.git/
+➜  mean-todo git:(master) ✗ git add README.md
+➜  mean-todo git:(master) ✗ echo "node_modules" >> .gitignore
+➜  mean-todo git:(master) ✗ git add .
+➜  mean-todo git:(master) ✗ git commit -m 'first commit'
+[master (root-commit) 2f41019] first commit
+ 2 files changed, 2 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+➜  mean-todo git:(master) git remote add origin git@github.com:kimmabrandt/mean-todo.git
+➜  mean-todo git:(master) git push -u origin master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 275 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To git@github.com:kimmabrandt/mean-todo.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+➜  mean-todo git:(master) npm init 
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg> --save` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+name: (mean-todo) 
+version: (1.0.0) 
+description: 
+entry point: (index.js) 
+test command: 
+git repository: (https://github.com/kimmabrandt/mean-todo.git) 
+keywords: 
+author: 
+license: (ISC) 
+About to write to /Users/kimbrandt/Documents/web-projects/mean-todo/package.json:
+
+{
+  "name": "mean-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimmabrandt/mean-todo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimmabrandt/mean-todo/issues"
+  },
+  "homepage": "https://github.com/kimmabrandt/mean-todo#readme"
+}
+
+
+Is this ok? (yes) 
+➜  mean-todo git:(master) ✗ npm install express --save
+mean-todo@1.0.0 /Users/kimbrandt/Documents/web-projects/mean-todo
+└─┬ express@4.14.0 
+  ├─┬ accepts@1.3.3 
+  │ ├─┬ mime-types@2.1.14 
+  │ │ └── mime-db@1.26.0 
+  │ └── negotiator@0.6.1 
+  ├── array-flatten@1.1.1 
+  ├── content-disposition@0.5.1 
+  ├── content-type@1.0.2 
+  ├── cookie@0.3.1 
+  ├── cookie-signature@1.0.6 
+  ├─┬ debug@2.2.0 
+  │ └── ms@0.7.1 
+  ├── depd@1.1.0 
+  ├── encodeurl@1.0.1 
+  ├── escape-html@1.0.3 
+  ├── etag@1.7.0 
+  ├─┬ finalhandler@0.5.0 
+  │ ├── statuses@1.3.1 
+  │ └── unpipe@1.0.0 
+  ├── fresh@0.3.0 
+  ├── merge-descriptors@1.0.1 
+  ├── methods@1.1.2 
+  ├─┬ on-finished@2.3.0 
+  │ └── ee-first@1.1.1 
+  ├── parseurl@1.3.1 
+  ├── path-to-regexp@0.1.7 
+  ├─┬ proxy-addr@1.1.3 
+  │ ├── forwarded@0.1.0 
+  │ └── ipaddr.js@1.2.0 
+  ├── qs@6.2.0 
+  ├── range-parser@1.2.0 
+  ├─┬ send@0.14.1 
+  │ ├── destroy@1.0.4 
+  │ ├─┬ http-errors@1.5.1 
+  │ │ ├── inherits@2.0.3 
+  │ │ └── setprototypeof@1.0.2 
+  │ └── mime@1.3.4 
+  ├─┬ serve-static@1.11.2 
+  │ └─┬ send@0.14.2 
+  │   └── ms@0.7.2 
+  ├─┬ type-is@1.6.14 
+  │ └── media-typer@0.3.0 
+  ├── utils-merge@1.0.0 
+  └── vary@1.1.0 
+
+npm WARN mean-todo@1.0.0 No description
+➜  mean-todo git:(master) ✗ npm install mongoose --save
+mean-todo@1.0.0 /Users/kimbrandt/Documents/web-projects/mean-todo
+└─┬ mongoose@4.7.9 
+  ├─┬ async@2.1.4 
+  │ └── lodash@4.17.4 
+  ├── bson@1.0.4 
+  ├── hooks-fixed@1.2.0 
+  ├── kareem@1.2.0 
+  ├─┬ mongodb@2.2.22 
+  │ ├── es6-promise@3.2.1 
+  │ ├─┬ mongodb-core@2.1.7 
+  │ │ └─┬ require_optional@1.0.0 
+  │ │   ├── resolve-from@2.0.0 
+  │ │   └── semver@5.3.0 
+  │ └─┬ readable-stream@2.1.5 
+  │   ├── buffer-shims@1.0.0 
+  │   ├── core-util-is@1.0.2 
+  │   ├── isarray@1.0.0 
+  │   ├── process-nextick-args@1.0.7 
+  │   ├── string_decoder@0.10.31 
+  │   └── util-deprecate@1.0.2 
+  ├── mpath@0.2.1 
+  ├── mpromise@0.5.5 
+  ├─┬ mquery@2.0.0 
+  │ ├── bluebird@2.10.2 
+  │ └── sliced@0.0.5 
+  ├── ms@0.7.2 
+  ├── muri@1.2.0 
+  ├── regexp-clone@0.0.1 
+  └── sliced@1.0.1 
+
+npm WARN mean-todo@1.0.0 No description
+➜  mean-todo git:(master) ✗ node
+> // Load mongoose package
+undefined
+> var mongoose = require('mongoose');
+undefined
+> // Connect to MongoDB and create/use database called todoAppTest
+undefined
+> mongoose.connect('mongodb://localhost/todoAppTest');
+Mongoose {
+  connections: 
+   [ NativeConnection {
+       base: [Object],
+       collections: {},
+       models: {},
+       config: [Object],
+       replica: false,
+       hosts: null,
+       host: 'localhost',
+       port: 27017,
+       user: undefined,
+       pass: undefined,
+       name: 'todoAppTest',
+       options: [Object],
+       otherDbs: [],
+       _readyState: 2,
+       _closeCalled: false,
+       _hasOpened: false,
+       _listening: false,
+       db: [Object] } ],
+  set: [Function],
+  get: [Function],
+  createConnection: [Function],
+  connect: [Function],
+  disconnect: [Function],
+  model: [Function],
+  modelNames: [Function],
+  _applyPlugins: [Function],
+  plugin: [Function],
+  '$opPromise': 
+   Promise {
+     emitter: 
+      EventEmitter {
+        domain: [Object],
+        _events: {},
+        _eventsCount: 0,
+        _maxListeners: undefined },
+     emitted: {},
+     ended: false } }
+> // Create a schema
+undefined
+> var TodoSchema = new mongoose.Schema({
+...   name: String,
+...   completed: Boolean,
+...   note: String,
+...   updated_at: { type: Date, default: Date.now },
+... });
+undefined
+> // Create a model based on the schema
+undefined
+> 
+> 
+(To exit, press ^C again or type .exit)
+> 
+➜  mean-todo git:(master) ✗ node
+> var mongoose = require('mongoose');
+undefined
+> use myDB
+SyntaxError: Unexpected identifier
+    at Object.exports.createScript (vm.js:47:10)
+    at REPLServer.defaultEval (repl.js:255:25)
+    at bound (domain.js:280:14)
+    at REPLServer.runBound [as eval] (domain.js:293:12)
+    at REPLServer.<anonymous> (repl.js:489:10)
+    at emitOne (events.js:101:20)
+    at REPLServer.emit (events.js:188:7)
+    at REPLServer.Interface._onLine (readline.js:232:10)
+    at REPLServer.Interface._line (readline.js:574:8)
+    at REPLServer.Interface._ttyWrite (readline.js:851:14)
+    at ReadStream.onkeypress (readline.js:119:10)
+    at emitTwo (events.js:106:13)
+    at ReadStream.emit (events.js:191:7)
+    at emitKeys (internal/readline.js:385:14)
+    at next (native)
+    at ReadStream.onData (readline.js:947:36)
+> 
+(To exit, press ^C again or type .exit)
+> 
+➜  mean-todo git:(master) ✗ mongo
+MongoDB shell version: 3.2.8
+connecting to: test
+Server has startup warnings: 
+2017-01-27T18:42:58.054-0800 I CONTROL  [initandlisten] 
+2017-01-27T18:42:58.054-0800 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+> use myDB
+switched to db myDB
+> ^C
+bye
+➜  mean-todo git:(master) ✗ nodemon
+[nodemon] 1.10.2
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node index.js`
+/Users/kimbrandt/Documents/web-projects/mean-todo/index.js:5
+app.use(expres.static('public'));
+        ^
+
+ReferenceError: expres is not defined
+    at Object.<anonymous> (/Users/kimbrandt/Documents/web-projects/mean-todo/index.js:5:9)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+    at run (bootstrap_node.js:352:7)
+    at startup (bootstrap_node.js:144:9)
+    at bootstrap_node.js:467:3
+[nodemon] app crashed - waiting for file changes before starting...
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+(node:28529) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+{ __v: 0,
+  name: 'Master NodeJS',
+  completed: false,
+  note: 'Getting there..',
+  _id: 588c0a7cb7e8f36f7160ec23,
+  updated_at: 2017-01-28T03:05:32.893Z }
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+(node:28574) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+{ __v: 0,
+  name: 'Creating something! YAYUH',
+  completed: true,
+  note: 'this is one',
+  _id: 588c0b46b876486f9e9b42bd,
+  updated_at: 2017-01-28T03:08:54.488Z }
+{ __v: 0,
+  name: 'Master NodeJS',
+  completed: false,
+  note: 'Getting there..',
+  _id: 588c0b46b876486f9e9b42bc,
+  updated_at: 2017-01-28T03:08:54.479Z }
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+[ { _id: 588c0a7cb7e8f36f7160ec23,
+    name: 'Master NodeJS',
+    completed: false,
+    note: 'Getting there..',
+    __v: 0,
+    updated_at: 2017-01-28T03:05:32.893Z },
+  { _id: 588c0b46b876486f9e9b42bc,
+    name: 'Master NodeJS',
+    completed: false,
+    note: 'Getting there..',
+    __v: 0,
+    updated_at: 2017-01-28T03:08:54.479Z },
+  { _id: 588c0b46b876486f9e9b42bd,
+    name: 'Creating something! YAYUH',
+    completed: true,
+    note: 'this is one',
+    __v: 0,
+    updated_at: 2017-01-28T03:08:54.488Z } ]
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+{ __v: 0,
+  name: 'Creating something! YAYUH',
+  completed: true,
+  note: 'this is one',
+  _id: 588c0c688892526fdf0fb750,
+  updated_at: 2017-01-28T03:13:44.105Z }
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+[ { _id: 588c0b46b876486f9e9b42bd,
+    name: 'Creating something! YAYUH',
+    completed: true,
+    note: 'this is one',
+    __v: 0,
+    updated_at: 2017-01-28T03:08:54.488Z },
+  { _id: 588c0c688892526fdf0fb750,
+    name: 'Creating something! YAYUH',
+    completed: true,
+    note: 'this is one',
+    __v: 0,
+    updated_at: 2017-01-28T03:13:44.105Z } ]
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+[ { _id: 588c0a7cb7e8f36f7160ec23,
+    name: 'Master NodeJS',
+    completed: false,
+    note: 'Getting there..',
+    __v: 0,
+    updated_at: 2017-01-28T03:05:32.893Z },
+  { _id: 588c0b46b876486f9e9b42bc,
+    name: 'Master NodeJS',
+    completed: false,
+    note: 'Getting there..',
+    __v: 0,
+    updated_at: 2017-01-28T03:08:54.479Z } ]
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+(node:28738) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+[ { _id: 588c0a7cb7e8f36f7160ec23,
+    name: 'Master NodeJS',
+    completed: false,
+    note: 'Getting there..',
+    __v: 0,
+    updated_at: 2017-01-28T03:05:32.893Z },
+  { _id: 588c0b46b876486f9e9b42bc,
+    name: 'Master NodeJS',
+    completed: false,
+    note: 'Getting there..',
+    __v: 0,
+    updated_at: 2017-01-28T03:08:54.479Z } ]
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+(node:28765) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+[ { _id: 588c0a7cb7e8f36f7160ec23,
+    name: 'Master NodeJS',
+    completed: false,
+    note: 'Getting there..',
+    __v: 0,
+    updated_at: 2017-01-28T03:05:32.893Z },
+  { _id: 588c0b46b876486f9e9b42bc,
+    name: 'Master NodeJS',
+    completed: false,
+    note: 'Getting there..',
+    __v: 0,
+    updated_at: 2017-01-28T03:08:54.479Z } ]
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+(node:28770) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+[ { _id: 588c0a7cb7e8f36f7160ec23,
+    name: 'Master NodeJS',
+    completed: false,
+    note: 'Getting there..',
+    __v: 0,
+    updated_at: 2017-01-28T03:05:32.893Z },
+  { _id: 588c0b46b876486f9e9b42bc,
+    name: 'Master NodeJS',
+    completed: false,
+    note: 'Getting there..',
+    __v: 0,
+    updated_at: 2017-01-28T03:08:54.479Z } ]
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+(node:28821) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+[ { _id: 588c0a7cb7e8f36f7160ec23,
+    name: 'Master NodeJS',
+    completed: false,
+    note: 'Getting there..',
+    __v: 0,
+    updated_at: 2017-01-28T03:05:32.893Z },
+  { _id: 588c0b46b876486f9e9b42bc,
+    name: 'Master NodeJS',
+    completed: false,
+    note: 'Getting there..',
+    __v: 0,
+    updated_at: 2017-01-28T03:08:54.479Z } ]
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+(node:28824) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+[ { _id: 588c0a7cb7e8f36f7160ec23,
+    name: 'Master NodeJS',
+    completed: false,
+    note: 'Getting there..',
+    __v: 0,
+    updated_at: 2017-01-28T03:05:32.893Z },
+  { _id: 588c0b46b876486f9e9b42bc,
+    name: 'Master NodeJS',
+    completed: false,
+    note: 'Getting there..',
+    __v: 0,
+    updated_at: 2017-01-28T03:08:54.479Z } ]
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+(node:28841) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+[ { _id: 588c0a7cb7e8f36f7160ec23,
+    name: 'Master NodeJS',
+    completed: false,
+    note: 'Getting there..',
+    __v: 0,
+    updated_at: 2017-01-28T03:05:32.893Z },
+  { _id: 588c0b46b876486f9e9b42bc,
+    name: 'Master NodeJS',
+    completed: false,
+    note: 'Getting there..',
+    __v: 0,
+    updated_at: 2017-01-28T03:08:54.479Z } ]
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+/Users/kimbrandt/Documents/web-projects/mean-todo/index.js:21
+Todo.update({ name: /master/i }, { completed: true }, { multi: true }, callback);
+                                                                       ^
+
+ReferenceError: callback is not defined
+    at Object.<anonymous> (/Users/kimbrandt/Documents/web-projects/mean-todo/index.js:21:72)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+    at run (bootstrap_node.js:352:7)
+    at startup (bootstrap_node.js:144:9)
+    at bootstrap_node.js:467:3
+[nodemon] app crashed - waiting for file changes before starting...
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+{ ok: 1, nModified: 2, n: 2 }
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+{ _id: 588c0a7cb7e8f36f7160ec23,
+  name: 'Master NodeJS',
+  completed: true,
+  note: 'Getting there..',
+  __v: 0,
+  updated_at: 2017-01-28T03:05:32.893Z }
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+{ ok: 1, nModified: 1, n: 2 }
+{ _id: 588c0a7cb7e8f36f7160ec23,
+  name: 'Master NodeJS',
+  completed: true,
+  note: 'Getting there..',
+  __v: 0,
+  updated_at: 2017-01-28T03:05:32.893Z }
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+{ _id: 588c0a7cb7e8f36f7160ec23,
+  name: 'Master NodeJS',
+  completed: true,
+  note: 'Getting there..',
+  __v: 0,
+  updated_at: 2017-01-28T03:05:32.893Z }
+{ ok: 1, nModified: 1, n: 2 }
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+{ __v: 0,
+  name: 'Remove me!',
+  completed: true,
+  note: 'this is one',
+  _id: 589e6a4a576ee5bcc8745155,
+  updated_at: 2017-02-11T01:35:06.758Z }
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+{ result: { ok: 1, n: 1 },
+  connection: 
+   EventEmitter {
+     domain: null,
+     _events: 
+      { error: [Object],
+        close: [Object],
+        timeout: [Object],
+        parseError: [Object] },
+     _eventsCount: 4,
+     _maxListeners: undefined,
+     options: 
+      { host: 'localhost',
+        port: 27017,
+        size: 5,
+        connectionTimeout: 30000,
+        socketTimeout: 30000,
+        keepAlive: true,
+        keepAliveInitialDelay: 0,
+        noDelay: true,
+        ssl: false,
+        checkServerIdentity: true,
+        ca: null,
+        cert: null,
+        key: null,
+        passPhrase: null,
+        rejectUnauthorized: false,
+        promoteLongs: true,
+        promoteValues: true,
+        promoteBuffers: false,
+        reconnect: true,
+        reconnectInterval: 1000,
+        reconnectTries: 30,
+        domainsEnabled: false,
+        disconnectHandler: [Object],
+        cursorFactory: [Object],
+        emitError: true,
+        socketOptions: {},
+        auto_reconnect: true,
+        clientInfo: [Object],
+        forceServerObjectId: false,
+        w: 1,
+        promiseLibrary: [Function: Promise],
+        bson: {} },
+     id: 0,
+     logger: { className: 'Connection' },
+     bson: {},
+     tag: undefined,
+     messageHandler: [Function],
+     maxBsonMessageSize: 67108864,
+     port: 27017,
+     host: 'localhost',
+     keepAlive: true,
+     keepAliveInitialDelay: 0,
+     noDelay: true,
+     connectionTimeout: 30000,
+     socketTimeout: 30000,
+     destroyed: false,
+     domainSocket: false,
+     singleBufferSerializtion: true,
+     serializationFunction: 'toBinUnified',
+     ca: null,
+     cert: null,
+     key: null,
+     passphrase: null,
+     ssl: false,
+     rejectUnauthorized: false,
+     checkServerIdentity: true,
+     responseOptions: 
+      { promoteLongs: true,
+        promoteValues: true,
+        promoteBuffers: false },
+     flushing: false,
+     queue: [],
+     connection: 
+      Socket {
+        connecting: false,
+        _hadError: false,
+        _handle: [Object],
+        _parent: null,
+        _host: 'localhost',
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _eventsCount: 8,
+        _maxListeners: undefined,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: false,
+        destroyed: false,
+        _bytesDispatched: 417,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: null,
+        _server: null,
+        _idleTimeout: 30000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 427,
+        read: [Function],
+        _consuming: true },
+     writeStream: null,
+     hashedName: '29bafad3b32b11dc7ce934204952515ea5984b3c',
+     workItems: [],
+     buffer: null,
+     sizeOfMessage: 0,
+     bytesRead: 0,
+     stubBuffer: null },
+  message: 
+   { parsed: true,
+     index: 56,
+     raw: <Buffer 38 00 00 00 84 a2 00 00 02 00 00 00 01 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 14 00 00 00 10 6f 6b 00 01 00 00 00 10 6e ... >,
+     data: <Buffer 38 00 00 00 84 a2 00 00 02 00 00 00 01 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 14 00 00 00 10 6f 6b 00 01 00 00 00 10 6e ... >,
+     bson: {},
+     opts: 
+      { promoteLongs: true,
+        promoteValues: true,
+        promoteBuffers: false },
+     length: 56,
+     requestId: 41604,
+     responseTo: 2,
+     responseFlags: 8,
+     cursorId: Long { _bsontype: 'Long', low_: 0, high_: 0 },
+     startingFrom: 0,
+     numberReturned: 1,
+     documents: [ [Object] ],
+     cursorNotFound: false,
+     queryFailure: false,
+     shardConfigStale: false,
+     awaitCapable: true,
+     promoteLongs: true,
+     promoteValues: true,
+     promoteBuffers: false,
+     hashedName: '29bafad3b32b11dc7ce934204952515ea5984b3c' } }
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+{ result: { ok: 1, n: 0 },
+  connection: 
+   EventEmitter {
+     domain: null,
+     _events: 
+      { error: [Object],
+        close: [Object],
+        timeout: [Object],
+        parseError: [Object] },
+     _eventsCount: 4,
+     _maxListeners: undefined,
+     options: 
+      { host: 'localhost',
+        port: 27017,
+        size: 5,
+        connectionTimeout: 30000,
+        socketTimeout: 30000,
+        keepAlive: true,
+        keepAliveInitialDelay: 0,
+        noDelay: true,
+        ssl: false,
+        checkServerIdentity: true,
+        ca: null,
+        cert: null,
+        key: null,
+        passPhrase: null,
+        rejectUnauthorized: false,
+        promoteLongs: true,
+        promoteValues: true,
+        promoteBuffers: false,
+        reconnect: true,
+        reconnectInterval: 1000,
+        reconnectTries: 30,
+        domainsEnabled: false,
+        disconnectHandler: [Object],
+        cursorFactory: [Object],
+        emitError: true,
+        socketOptions: {},
+        auto_reconnect: true,
+        clientInfo: [Object],
+        forceServerObjectId: false,
+        w: 1,
+        promiseLibrary: [Function: Promise],
+        bson: {} },
+     id: 0,
+     logger: { className: 'Connection' },
+     bson: {},
+     tag: undefined,
+     messageHandler: [Function],
+     maxBsonMessageSize: 67108864,
+     port: 27017,
+     host: 'localhost',
+     keepAlive: true,
+     keepAliveInitialDelay: 0,
+     noDelay: true,
+     connectionTimeout: 30000,
+     socketTimeout: 30000,
+     destroyed: false,
+     domainSocket: false,
+     singleBufferSerializtion: true,
+     serializationFunction: 'toBinUnified',
+     ca: null,
+     cert: null,
+     key: null,
+     passphrase: null,
+     ssl: false,
+     rejectUnauthorized: false,
+     checkServerIdentity: true,
+     responseOptions: 
+      { promoteLongs: true,
+        promoteValues: true,
+        promoteBuffers: false },
+     flushing: false,
+     queue: [],
+     connection: 
+      Socket {
+        connecting: false,
+        _hadError: false,
+        _handle: [Object],
+        _parent: null,
+        _host: 'localhost',
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _eventsCount: 8,
+        _maxListeners: undefined,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: false,
+        destroyed: false,
+        _bytesDispatched: 423,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: null,
+        _server: null,
+        _idleTimeout: 30000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 569,
+        read: [Function],
+        _consuming: true },
+     writeStream: null,
+     hashedName: '29bafad3b32b11dc7ce934204952515ea5984b3c',
+     workItems: [],
+     buffer: null,
+     sizeOfMessage: 0,
+     bytesRead: 0,
+     stubBuffer: null },
+  message: 
+   { parsed: true,
+     index: 56,
+     raw: <Buffer 38 00 00 00 95 a2 00 00 02 00 00 00 01 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 14 00 00 00 10 6f 6b 00 01 00 00 00 10 6e ... >,
+     data: <Buffer 38 00 00 00 95 a2 00 00 02 00 00 00 01 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 14 00 00 00 10 6f 6b 00 01 00 00 00 10 6e ... >,
+     bson: {},
+     opts: 
+      { promoteLongs: true,
+        promoteValues: true,
+        promoteBuffers: false },
+     length: 56,
+     requestId: 41621,
+     responseTo: 2,
+     responseFlags: 8,
+     cursorId: Long { _bsontype: 'Long', low_: 0, high_: 0 },
+     startingFrom: 0,
+     numberReturned: 1,
+     documents: [ [Object] ],
+     cursorNotFound: false,
+     queryFailure: false,
+     shardConfigStale: false,
+     awaitCapable: true,
+     promoteLongs: true,
+     promoteValues: true,
+     promoteBuffers: false,
+     hashedName: '29bafad3b32b11dc7ce934204952515ea5984b3c' } }
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+{ __v: 0,
+  name: 'To Delete',
+  completed: true,
+  note: 'this is one',
+  _id: 589e6b4eaee158bcfb2870f1,
+  updated_at: 2017-02-11T01:39:26.794Z }
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+/Users/kimbrandt/Documents/web-projects/mean-todo/index.js:37
+Todo.findByIdAndRemove({id: 589e6b4eaee158bcfb2870f1}, callback);
+                            ^^^^^
+SyntaxError: Unexpected token ILLEGAL
+    at Object.exports.runInThisContext (vm.js:76:16)
+    at Module._compile (module.js:513:28)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+    at run (bootstrap_node.js:352:7)
+    at startup (bootstrap_node.js:144:9)
+    at bootstrap_node.js:467:3
+[nodemon] app crashed - waiting for file changes before starting...
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+/Users/kimbrandt/Documents/web-projects/mean-todo/index.js:37
+Todo.findByIdAndRemove(589e6b4eaee158bcfb2870f1, callback);
+                       ^^^^^
+SyntaxError: Unexpected token ILLEGAL
+    at Object.exports.runInThisContext (vm.js:76:16)
+    at Module._compile (module.js:513:28)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+    at run (bootstrap_node.js:352:7)
+    at startup (bootstrap_node.js:144:9)
+    at bootstrap_node.js:467:3
+[nodemon] app crashed - waiting for file changes before starting...
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+null
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+null
+^C%                                                                             ➜  mean-todo git:(master) ✗ nodemon
+[nodemon] 1.10.2
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node index.js`
+null
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+^C
+
+┌────────────────────────────────────────────┐
+│ Update available: 1.11.0 (current: 1.10.2) │
+│ Run npm install -g nodemon to update.      │
+└────────────────────────────────────────────┘
+
+➜  mean-todo git:(master) ✗ git add . 
+➜  mean-todo git:(master) ✗ git status  
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   create.js
+	new file:   index.js
+	new file:   package.json
+
+➜  mean-todo git:(master) ✗ git commit -m 'mongoose CRUD, express middleware'
+[master 4b81b0a] mongoose CRUD, express middleware
+ 3 files changed, 139 insertions(+)
+ create mode 100644 create.js
+ create mode 100644 index.js
+ create mode 100644 package.json
+➜  mean-todo git:(master) git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 2.01 KiB | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To git@github.com:kimmabrandt/mean-todo.git
+   2f41019..4b81b0a  master -> master
+➜  mean-todo git:(master) nodemon
+[nodemon] 1.10.2
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node index.js`
+^C
+
+┌────────────────────────────────────────────┐
+│ Update available: 1.11.0 (current: 1.10.2) │
+│ Run npm install -g nodemon to update.      │
+└────────────────────────────────────────────┘
+
+➜  mean-todo git:(master) ✗ npm install express-generator -g
+/usr/local/bin/express -> /usr/local/lib/node_modules/express-generator/bin/express
+/usr/local/lib
+└─┬ express-generator@4.14.1 
+  ├─┬ commander@2.9.0 
+  │ └── graceful-readlink@1.0.1 
+  ├─┬ mkdirp@0.5.1 
+  │ └── minimist@0.0.8 
+  └── sorted-object@2.0.1 
+
+➜  mean-todo git:(master) ✗ express mean-todo -e
+
+  warning: option `--ejs' has been renamed to `--view=ejs'
+
+
+   create : mean-todo
+   create : mean-todo/package.json
+   create : mean-todo/app.js
+   create : mean-todo/public
+   create : mean-todo/public/javascripts
+   create : mean-todo/public/images
+   create : mean-todo/public/stylesheets
+   create : mean-todo/public/stylesheets/style.css
+   create : mean-todo/routes
+   create : mean-todo/routes/index.js
+   create : mean-todo/routes/users.js
+   create : mean-todo/views
+   create : mean-todo/views/index.ejs
+   create : mean-todo/views/error.ejs
+   create : mean-todo/bin
+   create : mean-todo/bin/www
+
+   install dependencies:
+     $ cd mean-todo && npm install
+
+   run the app:
+     $ DEBUG=mean-todo:* npm start
+
+➜  mean-todo git:(master) ✗ cd mean-todo && npm install
+mean-todo@0.0.0 /Users/kimbrandt/Documents/web-projects/mean-todo/mean-todo
+├─┬ body-parser@1.16.1 
+│ ├── bytes@2.4.0 
+│ ├── content-type@1.0.2 
+│ ├── depd@1.1.0 
+│ ├─┬ http-errors@1.5.1 
+│ │ ├── inherits@2.0.3 
+│ │ ├── setprototypeof@1.0.2 
+│ │ └── statuses@1.3.1 
+│ ├── iconv-lite@0.4.15 
+│ ├─┬ on-finished@2.3.0 
+│ │ └── ee-first@1.1.1 
+│ ├── qs@6.2.1 
+│ ├─┬ raw-body@2.2.0 
+│ │ └── unpipe@1.0.0 
+│ └─┬ type-is@1.6.14 
+│   ├── media-typer@0.3.0 
+│   └─┬ mime-types@2.1.14 
+│     └── mime-db@1.26.0 
+├─┬ cookie-parser@1.4.3 
+│ ├── cookie@0.3.1 
+│ └── cookie-signature@1.0.6 
+├─┬ debug@2.6.1 
+│ └── ms@0.7.2 
+├── ejs@2.5.5 
+├─┬ express@4.14.1 
+│ ├─┬ accepts@1.3.3 
+│ │ └── negotiator@0.6.1 
+│ ├── array-flatten@1.1.1 
+│ ├── content-disposition@0.5.2 
+│ ├─┬ debug@2.2.0 
+│ │ └── ms@0.7.1 
+│ ├── encodeurl@1.0.1 
+│ ├── escape-html@1.0.3 
+│ ├── etag@1.7.0 
+│ ├─┬ finalhandler@0.5.1 
+│ │ └─┬ debug@2.2.0 
+│ │   └── ms@0.7.1 
+│ ├── fresh@0.3.0 
+│ ├── merge-descriptors@1.0.1 
+│ ├── methods@1.1.2 
+│ ├── parseurl@1.3.1 
+│ ├── path-to-regexp@0.1.7 
+│ ├─┬ proxy-addr@1.1.3 
+│ │ ├── forwarded@0.1.0 
+│ │ └── ipaddr.js@1.2.0 
+│ ├── qs@6.2.0 
+│ ├── range-parser@1.2.0 
+│ ├─┬ send@0.14.2 
+│ │ ├─┬ debug@2.2.0 
+│ │ │ └── ms@0.7.1 
+│ │ ├── destroy@1.0.4 
+│ │ └── mime@1.3.4 
+│ ├── serve-static@1.11.2 
+│ ├── utils-merge@1.0.0 
+│ └── vary@1.1.0 
+├─┬ morgan@1.7.0 
+│ ├── basic-auth@1.0.4 
+│ ├─┬ debug@2.2.0 
+│ │ └── ms@0.7.1 
+│ └── on-headers@1.0.1 
+└── serve-favicon@2.3.2 
+
+➜  mean-todo git:(master) ✗ PORT=4000 npm start
+
+> mean-todo@0.0.0 start /Users/kimbrandt/Documents/web-projects/mean-todo/mean-todo
+> node ./bin/www
+
+GET / 200 18.185 ms - 207
+GET /stylesheets/style.css 200 8.357 ms - 111
+GET /favicon.ico 404 3.840 ms - 1286
+^C
+➜  mean-todo git:(master) ✗ npm install mongoose --save
+mean-todo@0.0.0 /Users/kimbrandt/Documents/web-projects/mean-todo/mean-todo
+└─┬ mongoose@4.8.2 
+  ├─┬ async@2.1.4 
+  │ └── lodash@4.17.4 
+  ├── bson@1.0.4 
+  ├── hooks-fixed@1.2.0 
+  ├── kareem@1.2.1 
+  ├─┬ mongodb@2.2.22 
+  │ ├── es6-promise@3.2.1 
+  │ ├─┬ mongodb-core@2.1.7 
+  │ │ └─┬ require_optional@1.0.0 
+  │ │   ├── resolve-from@2.0.0 
+  │ │   └── semver@5.3.0 
+  │ └─┬ readable-stream@2.1.5 
+  │   ├── buffer-shims@1.0.0 
+  │   ├── core-util-is@1.0.2 
+  │   ├── isarray@1.0.0 
+  │   ├── process-nextick-args@1.0.7 
+  │   ├── string_decoder@0.10.31 
+  │   └── util-deprecate@1.0.2 
+  ├── mpath@0.2.1 
+  ├── mpromise@0.5.5 
+  ├─┬ mquery@2.2.3 
+  │ ├── bluebird@2.10.2 
+  │ ├─┬ debug@2.2.0 
+  │ │ └── ms@0.7.1 
+  │ └── sliced@0.0.5 
+  ├── muri@1.2.1 
+  ├── regexp-clone@0.0.1 
+  └── sliced@1.0.1 
+
+➜  mean-todo git:(master) ✗ npm start
+
+> mean-todo@0.0.0 start /Users/kimbrandt/Documents/web-projects/mean-todo/mean-todo
+> node ./bin/www
+
+connection successful
+POST /todos 404 27.746 ms - 2062
+GET / 200 33.559 ms - 207
+GET / 200 1.931 ms - 207
+GET /stylesheets/style.css 200 6.927 ms - 111
+POST /todos 404 7.913 ms - 2062
+POST /todos 404 53.123 ms - 2062
+POST /todos 404 13.773 ms - 2062
+POST /todos 404 3.139 ms - 2062
+POST /todos 404 6.763 ms - 2062
+POST /todos 404 5.789 ms - 2062
+^C
+➜  mean-todo git:(master) ✗ npm start
+
+> mean-todo@0.0.0 start /Users/kimbrandt/Documents/web-projects/mean-todo/mean-todo
+> node ./bin/www
+
+module.js:442
+    throw err;
+    ^
+
+Error: Cannot find module './routes/users'
+    at Function.Module._resolveFilename (module.js:440:15)
+    at Function.Module._load (module.js:388:25)
+    at Module.require (module.js:468:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/kimbrandt/Documents/web-projects/mean-todo/mean-todo/app.js:15:13)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.require (module.js:468:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/kimbrandt/Documents/web-projects/mean-todo/mean-todo/bin/www:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+
+npm ERR! Darwin 15.4.0
+npm ERR! argv "/usr/local/Cellar/node/6.3.0/bin/node" "/usr/local/bin/npm" "start"
+npm ERR! node v6.3.0
+npm ERR! npm  v3.10.3
+npm ERR! code ELIFECYCLE
+npm ERR! mean-todo@0.0.0 start: `node ./bin/www`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the mean-todo@0.0.0 start script 'node ./bin/www'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the mean-todo package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node ./bin/www
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs mean-todo
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls mean-todo
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/kimbrandt/Documents/web-projects/mean-todo/mean-todo/npm-debug.log
+➜  mean-todo git:(master) ✗ npm start
+
+> mean-todo@0.0.0 start /Users/kimbrandt/Documents/web-projects/mean-todo/mean-todo
+> node ./bin/www
+
+connection successful
+GET /todos 200 18.987 ms - 2
+^C
+➜  mean-todo git:(master) ✗ npm install nodemon -g
+/usr/local/bin/nodemon -> /usr/local/lib/node_modules/nodemon/bin/nodemon.js
+
+> fsevents@1.0.17 install /usr/local/lib/node_modules/nodemon/node_modules/fsevents
+> node-pre-gyp install --fallback-to-build
+
+[fsevents] Success: "/usr/local/lib/node_modules/nodemon/node_modules/fsevents/lib/binding/Release/node-v48-darwin-x64/fse.node" already installed
+Pass --update-binary to reinstall or --build-from-source to recompile
+- async@1.5.2 node_modules/nodemon/node_modules/fsevents/node_modules/async
+- readable-stream@2.0.6 node_modules/nodemon/node_modules/fsevents/node_modules/bl/node_modules/readable-stream
+- bl@1.1.2 node_modules/nodemon/node_modules/fsevents/node_modules/bl
+- has-color@0.1.7 node_modules/nodemon/node_modules/fsevents/node_modules/has-color
+- node-uuid@1.4.7 node_modules/nodemon/node_modules/fsevents/node_modules/node-uuid
+/usr/local/lib
+└─┬ nodemon@1.11.0 
+  ├─┬ chokidar@1.6.1 
+  │ ├─┬ anymatch@1.3.0
+  │ │ └─┬ micromatch@2.3.11
+  │ │   ├─┬ braces@1.8.5
+  │ │   │ └─┬ expand-range@1.8.2
+  │ │   │   └─┬ fill-range@2.2.3
+  │ │   │     ├── randomatic@1.1.6 
+  │ │   │     └── repeat-string@1.6.1 
+  │ │   ├── kind-of@3.1.0 
+  │ │   └── object.omit@2.0.1 
+  │ ├─┬ fsevents@1.0.17 
+  │ │ ├── nan@2.5.1 
+  │ │ └─┬ node-pre-gyp@0.6.32 
+  │ │   ├─┬ npmlog@4.0.2 
+  │ │   │ ├─┬ are-we-there-yet@1.1.2
+  │ │   │ │ └── readable-stream@2.2.2 
+  │ │   │ └─┬ gauge@2.7.2 
+  │ │   │   ├── signal-exit@3.0.2 
+  │ │   │   ├─┬ string-width@1.0.2 
+  │ │   │   │ ├── code-point-at@1.1.0 
+  │ │   │   │ └─┬ is-fullwidth-code-point@1.0.0
+  │ │   │   │   └── number-is-nan@1.0.1 
+  │ │   │   └── supports-color@0.2.0 
+  │ │   ├─┬ request@2.79.0 
+  │ │   │ ├── aws4@1.5.0 
+  │ │   │ ├─┬ form-data@2.1.2 
+  │ │   │ │ └── asynckit@0.4.0 
+  │ │   │ ├─┬ har-validator@2.0.6
+  │ │   │ │ ├─┬ chalk@1.1.3
+  │ │   │ │ │ └── supports-color@2.0.0 
+  │ │   │ │ └─┬ is-my-json-valid@2.15.0 
+  │ │   │ │   └── jsonpointer@4.0.1 
+  │ │   │ ├─┬ http-signature@1.1.1
+  │ │   │ │ ├─┬ jsprim@1.3.1 
+  │ │   │ │ │ └── json-schema@0.2.3 
+  │ │   │ │ └─┬ sshpk@1.10.1 
+  │ │   │ │   ├── bcrypt-pbkdf@1.0.0 
+  │ │   │ │   ├── dashdash@1.14.1 
+  │ │   │ │   └── tweetnacl@0.14.5 
+  │ │   │ ├─┬ mime-types@2.1.13 
+  │ │   │ │ └── mime-db@1.25.0 
+  │ │   │ ├── qs@6.3.0 
+  │ │   │ ├─┬ tough-cookie@2.3.2 
+  │ │   │ │ └── punycode@1.4.1 
+  │ │   │ └── uuid@3.0.1 
+  │ │   ├─┬ rimraf@2.5.4 
+  │ │   │ └─┬ glob@7.1.1 
+  │ │   │   ├── inflight@1.0.6 
+  │ │   │   ├─┬ minimatch@3.0.3 
+  │ │   │   │ └── brace-expansion@1.1.6 
+  │ │   │   ├── once@1.4.0 
+  │ │   │   └── path-is-absolute@1.0.1 
+  │ │   ├── semver@5.3.0 
+  │ │   ├─┬ tar@2.2.1
+  │ │   │ ├─┬ fstream@1.0.10
+  │ │   │ │ └── graceful-fs@4.1.11 
+  │ │   │ └── inherits@2.0.3 
+  │ │   └─┬ tar-pack@3.3.0 
+  │ │     ├── once@1.3.3 
+  │ │     └── readable-stream@2.1.5 
+  │ ├─┬ is-binary-path@1.0.1
+  │ │ └── binary-extensions@1.8.0 
+  │ └─┬ readdirp@2.1.0
+  │   ├── graceful-fs@4.1.11 
+  │   └── readable-stream@2.2.2 
+  ├─┬ debug@2.6.1 
+  │ └── ms@0.7.2 
+  └─┬ update-notifier@0.5.0
+    ├─┬ chalk@1.1.3
+    │ └─┬ has-ansi@2.0.0
+    │   └── ansi-regex@2.1.1 
+    ├─┬ configstore@1.4.0
+    │ ├── object-assign@4.1.1 
+    │ ├── osenv@0.1.4 
+    │ └── write-file-atomic@1.3.1 
+    └─┬ latest-version@1.0.1
+      └─┬ package-json@1.2.0
+        └─┬ got@3.3.1
+          └── duplexify@3.5.0 
+
+➜  mean-todo git:(master) ✗ nodemon
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node ./bin/www`
+connection successful
+[nodemon] restarting due to changes...
+[nodemon] starting `node ./bin/www`
+connection successful
+^C
+
+┌────────────────────────────────────────────┐
+│ Update available: 1.11.0 (current: 1.10.2) │
+│ Run npm install -g nodemon to update.      │
+└────────────────────────────────────────────┘
+
+➜  mean-todo git:(master) PORT=4000 nodemon
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node ./bin/www`
+connection successful
+curl -XPOST http://localhost:4000/todos -d 'name=Master%20Routes&completed=false&note=soon...'
+
+POST /todos 200 120.676 ms - 140
+GET /todos/57a655997d2241695585ecf8 200 19.299 ms - 4
+GET /todos/58a2849225802ee3f916cd5c 200 11.340 ms - 140
+GET /todos 200 4.724 ms - 142
+[nodemon] restarting due to changes...
+[nodemon] starting `node ./bin/www`
+connection successful
+PUT /todos/58a2849225802ee3f916cd5c 200 41.743 ms - 140
+[nodemon] restarting due to changes...
+[nodemon] starting `node ./bin/www`
+connection successful
+PUT /todos/58a2849225802ee3f916cd5c 200 39.320 ms - 137
+[nodemon] restarting due to changes...
+[nodemon] starting `node ./bin/www`
+connection successful
+DELETE /todos/58a2849225802ee3f916cd5c 200 21.955 ms - 137
+GET /todos/58a2849225802ee3f916cd5c 200 9.669 ms - 4
+
