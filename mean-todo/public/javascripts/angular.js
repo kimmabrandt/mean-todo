@@ -33,7 +33,7 @@ angular.module('app', ['ngRoute', 'ngResource'])
 
     $scope.remove = function(index){
       var todo = $scope.todos[index];
-      Todos.remove({id: todo_.id}, function(){
+      Todos.remove({id: todo._id}, function(){
         $scope.todos.splice(index, 1);
       });
     }

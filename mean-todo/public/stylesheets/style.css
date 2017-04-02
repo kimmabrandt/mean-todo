@@ -1,23 +1,28 @@
 /*background-color: #ffffff;
 background-image: url("https://www.transparenttextures.com/patterns/cubes.png");*/
-
+.material-icons.md-24 { font-size: 22px; }
+.material-icons.md-36 { font-size: 36px; }
 
 body {
   background-color: #ffffff;
   background-image: url("https://www.transparenttextures.com/patterns/use-your-illusion.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-
   padding: 50px;
   font-family: 'Space Mono', monospace;
 }
-
 a {
   color: #000;
   text-decoration: none;
-  /*font-style: italic;*/
   font-size: 18px;
 }
-
+a:hover {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+button {
+  border: none;
+  margin: 5px;
+}
 .container {
   width: 60%;
   margin: 0 auto;
@@ -32,8 +37,15 @@ h1 {
   font-size: 50px;
   margin-top: 0;
 }
+
+/* Todo List */
 #todolist {
   text-align: left;
+}
+.todo-ul {
+  list-style-position: inside;
+  list-style:none;
+  padding-left:20px;
 }
 .todo-ul li {
   display: block;
@@ -62,10 +74,12 @@ background-color: #99FF99;
   background-color: white;
   border: 1px solid black;
 }*/
+
 .todo-ul button:hover {
   float: right;
   margin: 0 3px 0 3px;
-  color: #747474;
+  border-bottom: 2px solid #000;
+  cursor: pointer;
 }
 .todo-ul input {
   font-size: 16px;
@@ -74,7 +88,44 @@ background-color: #99FF99;
   padding-left: 10px;
   border: none;
 }
-button {
-  border: none;
+
+
+/* Todo Detail View */
+#todo-details h2 {
+  font-size: 30px;
+  font-weight: 400;
+  background-color: #99FF99;
+  padding: 10px 10px 10px 20px;
 }
-.material-icons.md-24 { font-size: 22px; }
+.detail-note {
+  margin: 15px 10px 10px 0;
+}
+.detail-note textarea {
+  margin-top: 5px;
+  font-size: 16px;
+  font-family: 'Space Mono', monospace;
+  padding: 2px;
+  padding-left: 10px;
+  border: none;
+  width: 100%;
+  background-color: #fff;
+  background-image:
+  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+  linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 1.2em;
+}
+
+.detail-buttons {
+  margin: 10px 10px 10px 0;
+}
+.detail-buttons button {
+  background-color: transparent;
+}
+.detail-buttons button:hover {
+  color: #99FF99;
+  cursor: pointer;
+}
+.detail-cancel {
+  float: right;
+  padding-top: 19px;
+}

@@ -16,14 +16,13 @@
       </div>
 
       <!-- Template - List Display -->
-
         <script type="text/ng-template" id="/todos.html">
           Search: <input type="text" ng-model="search.name">
           <ul class="todo-ul">
             <li ng-repeat="todo in todos | filter: search">
               <input type="checkbox" ng-model="todo.completed" ng-change="update($index)">
               <a ng-show="!editing[$index]" href="#/{{todo._id}}">{{todo.name}}</a>
-              <button ng-show="!editing[$index]" ng-click="edit($index)"><i class="material-icons md-24">create</i></button>
+              <button ng-show="!editing[$index]" ng-click="edit($index)"><i class="material-icons md-24">edit</i></button>
               <button ng-show="!editing[$index]" ng-click="remove($index)"><i class="material-icons md-24">delete</i></button>
 
               <input ng-show="editing[$index]" type="text" ng-model="todo.name">
@@ -38,13 +37,22 @@
 
       <!-- Template - Todo Details -->
       <script type="text/ng-template" id="/todoDetails.html">
-        <h1>{{ todo.name }}</h1>
-        completed: <input type="checkbox" ng-model="todo.completed"><br>
-        note: <textarea ng-model="todo.note"></textarea><br><br>
+        <div id="todo-details">
+          <h2>{{ todo.name }}</h2>
 
-        <button ng-click="update()">Update</button>
-        <button ng-click="remove()">Remove</button>
-        <a href="/">Cancel</a>
+          completed: <input type="checkbox" ng-model="todo.completed">
+
+          <div class="detail-note">
+            note:<br> <textarea ng-model="todo.note"></textarea>
+          </div>
+
+          <div class="detail-buttons">
+            <button ng-click="update()"><i class="material-icons md-36">done</i></button>
+            <button ng-click="remove()"><i class="material-icons md-36">delete</i></button>
+            <a href="/" class="detail-cancel">Cancel</a>
+          </div>
+
+        </div>
       </script>
 
     </div>
