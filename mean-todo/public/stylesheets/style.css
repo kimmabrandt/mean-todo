@@ -1,12 +1,12 @@
-/*background-color: #ffffff;
-background-image: url("https://www.transparenttextures.com/patterns/cubes.png");*/
-.material-icons.md-24 { font-size: 22px; }
-.material-icons.md-36 { font-size: 36px; }
 
+
+/* main */
+.material-icons.md-24 { font-size: 22px; }
+.material-icons.md-34 { font-size: 34px; }
+.material-icons.md-36 { font-size: 36px; }
 body {
   background-color: #ffffff;
-  background-image: url("https://www.transparenttextures.com/patterns/use-your-illusion.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  background-image: url("/images/use-your-illusion.png");
   padding: 50px;
   font-family: 'Space Mono', monospace;
 }
@@ -25,17 +25,25 @@ button {
 }
 .container {
   width: 60%;
+  min-width: 400px;
   margin: 0 auto;
   background-color: white;
   padding: 50px;
   text-align: center;
+
 }
 h1 {
   font-family: 'Space Mono', monospace;
-  /*font-style: italic;*/
   font-weight: 400;
   font-size: 50px;
   margin-top: 0;
+  letter-spacing: 0.35rem;
+  color: #000;
+  text-shadow: .02em 0 0  #99FF99,
+              0 .02em 0 #99FF99,
+              -.02em 0 0 #99FF99,
+              0 -.02em 0 #99FF99,
+              5px 5px 0 #eaeaea;
 }
 
 /* Todo List */
@@ -49,8 +57,8 @@ h1 {
 }
 .todo-ul li {
   display: block;
-  margin: 5px;
   background-color: #f0f0f0;
+  margin: 5px;
   padding: 10px;
   font-size: 18px
 }
@@ -62,22 +70,7 @@ background-color: #99FF99;
   margin: 0 3px 0 3px;
   background-color: transparent;
 }
-/*.todo-ul button {
-  float: right;
-  margin: 0 3px 0 3px;
-  background-color: #99FF99;
-  border: 1px solid black;
-}*/
-/*.todo-ul button:hover {
-  float: right;
-  margin: 3px 3px 0 3px;
-  background-color: white;
-  border: 1px solid black;
-}*/
-
 .todo-ul button:hover {
-  float: right;
-  margin: 0 3px 0 3px;
   border-bottom: 2px solid #000;
   cursor: pointer;
 }
@@ -89,6 +82,40 @@ background-color: #99FF99;
   border: none;
 }
 
+/* New Task / Search Input */
+.newtask {
+  font-size: 18px;
+  height: 40px;
+  display: block;
+  vertical-align: middle;
+  padding-left: 10px;
+  width: 328px;
+}
+.newtask button {
+  background-color: transparent;
+  padding: 0;
+  height: 22px;
+  float: right;
+  margin: 0 3px 0 3px;
+}
+.newtask button:hover {
+  cursor: pointer;
+  color: #99FF99;
+}
+.newtask input, .search input {
+  border: 2px solid #e2e2e2;
+  height: 26px;
+  width: 180px;
+  font-size: 17px;
+  font-family: 'Space Mono', monospace;
+}
+.newtask input:hover, .newtask input:focus, .search input:hover, .search input:focus {
+  border: 2px solid #99FF99;
+}
+.search {
+  font-style: italic;
+  font-size: 18px;
+}
 
 /* Todo Detail View */
 #todo-details h2 {
@@ -104,8 +131,7 @@ background-color: #99FF99;
   margin-top: 5px;
   font-size: 16px;
   font-family: 'Space Mono', monospace;
-  padding: 2px;
-  padding-left: 10px;
+  padding: 2px 2px 2px 10px;
   border: none;
   width: 100%;
   background-color: #fff;
@@ -114,7 +140,6 @@ background-color: #99FF99;
   linear-gradient(#eee .1em, transparent .1em);
   background-size: 100% 1.2em;
 }
-
 .detail-buttons {
   margin: 10px 10px 10px 0;
 }

@@ -17,7 +17,9 @@
 
       <!-- Template - List Display -->
         <script type="text/ng-template" id="/todos.html">
-          Search: <input type="text" ng-model="search.name">
+          <div class="newtask">
+            New task <input type="text" ng-model="newTodo"><button ng-click="save()"><i class="material-icons md-34">add</i></button>
+          </div>
           <ul class="todo-ul">
             <li ng-repeat="todo in todos | filter: search">
               <input type="checkbox" ng-model="todo.completed" ng-change="update($index)">
@@ -30,7 +32,10 @@
               <button ng-show="editing[$index]" ng-click="cancel($index)"><i class="material-icons md-18">clear</i></button>
             </li>
           </ul>
-          New task <input type="text" ng-model="newTodo"><button ng-click="save()">Create</button>
+          <div class="search">
+            Search: <input type="text" ng-model="search.name">
+          </div>
+
         </script>
 
 
